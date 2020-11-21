@@ -25,8 +25,10 @@ y = dataset.iloc[:, -1]
 #Splitting Training and Test Set
 #Since we have a very small dataset, we will train our model with all availabe data.
 
-from sklearn.linear_model import LinearRegression
-regressor = LinearRegression()
+#from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestClassifier
+#regressor = LinearRegression()
+regressor = RandomForestClassifier
 
 #Fitting model with trainig data
 regressor.fit(X, y)
